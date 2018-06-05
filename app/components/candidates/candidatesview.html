@@ -1,0 +1,15 @@
+<h1>Candidates</h1>
+
+<h3>{{message}}</h3>
+
+<div>
+  <ul>
+    <li ng-repeat="candidate in candidatesList">
+      {{candidate}}
+      <span ng-click="removeItem($index)">&times;</span>
+    </li>
+    <input ng-model="newCandidate">
+    <button ng-click="addItem()">Add</button>
+    <p>{{errortext}}</p>
+  </ul>
+</div>

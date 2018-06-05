@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="MyAgileHr">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="app/myagilehr.routes.js"></script>
+    <script src="app/components/candidates/candidatescontroller.js"></script>
+    <script src="app/components/requisitions/requisitionscontroller.js"></script>
+    <script src="app/components/scheduler/schedulercontroller.js"></script>
+  </head>
+  <body>
+    <a href="#!">Candidates</a>
+    <a href="#!requisitions">Requisitions</a>
+    <a href="#!scheduler">Scheduler</a>
+    <div ng-view=""></div>
+  </body>
+</html>
