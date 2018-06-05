@@ -1,15 +1,26 @@
-<h1>Candidates</h1>
-
-<h3>{{message}}</h3>
-
+<div class="pageHeader">{{pageHeader}}</div>
+<div class="pageHeaderDetails">{{pageHeaderDetails}}</div>
 <div>
-  <ul>
-    <li ng-repeat="candidate in candidatesList">
-      {{candidate}}
-      <span ng-click="removeItem($index)">&times;</span>
-    </li>
-    <input ng-model="newCandidate">
-    <button ng-click="addItem()">Add</button>
-    <p>{{errortext}}</p>
-  </ul>
+  <ln>Name: <input ng-model="newCandidateName"></ln>
+  <ln>Age<input ng-model="newCandidateAge"></ln>
+  <button ng-click="addItem()">Add</button>
+  <p>{{errortext}}</p>
+  <table>
+    <col width="200">
+    <col width="150">
+    <col width="100">
+    <tr class="tableHeader">
+      <td>Name</td>
+      <td>Age</td>
+      <td>Delete</td>
+    </tr>
+    <tr ng-repeat="candidate in candidatesList">
+      <td ng-if="$odd" style="background-color:#e6ecff">{{candidate.name}}</td>
+      <td ng-if="$odd" style="background-color:#e6ecff">{{candidate.age}}</td>
+      <td ng-if="$odd" style="background-color:#e6ecff"><span ng-click="removeItem($index)">&times;</span></td>
+      <td ng-if="$even" style="background-color:#b3c6ff">{{candidate.name}}</td>
+      <td ng-if="$even" style="background-color:#b3c6ff">{{candidate.age}}</td>
+      <td ng-if="$even" style="background-color:#b3c6ff"><span ng-click="removeItem($index)">&times;</span></td>
+    </tr>
+  </table>
 </div>

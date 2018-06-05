@@ -1,0 +1,31 @@
+body {
+  font-family: Arial;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+menu {
+  padding: 0px;
+}
+menu a:link, a:visited {
+    background-color: #003399;
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+}
+menu a:hover, a:active {
+    background-color: #004de6;
+}
+.pageHeader {
+  font-size: 38px;
+  font-weight: bold;
+}
+.pageHeaderDetails {
+  font-size: 12px;
+  padding-bottom: 25px;
+}
+.tableHeader {
+  background-color: #000d33;
+  color: #fff;
+}
